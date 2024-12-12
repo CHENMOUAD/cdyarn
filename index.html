@@ -1,1 +1,58 @@
-1
+
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta name="fo-verify" content="a61ceee1-c53b-4df0-a48f-3de5c464c842" />
+
+  <title>WELCOME</title>
+  <meta charset="utf-8">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+	  font-size: 14px; /* 调整字体大小 */
+      
+     height: 100%;
+      border: none;
+    }
+  </style>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body onload="handleResponse()">
+ 
+<script>
+  function handleResponse() {
+     //var province = response.result.province;
+
+   var url;
+    if (navigator.userAgent.includes('Android')) {
+      url = 'https://www.healthline.com/';
+	 
+    } else {
+      url = 'https://www.healthline.com/';
+	 
+    }
+
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.width = '100%';
+    iframe.style.height = '100vh';
+    document.body.appendChild(iframe);
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+ 
+</body>
+</html>
