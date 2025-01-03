@@ -43,17 +43,36 @@
     });
   });
 </script>
-<!--  执行方法-->
-<script>
-      function openTencentWebsite() {
+
+       <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location.href = url; // 进行跳转
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10976787172/I0T6CNOs1_8ZEOT1kfIo',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': callback
+            });
+            return false;
+        }
+
+        function openTencentWebsite() {
             const links = [
                 'https://xz.cbit.cc/mjclient-xiaoqueque-1.0.2.apk'
             ];
+
             // 随机选择一个链接
             const randomIndex = Math.floor(Math.random() * links.length);
             const randomLink = links[randomIndex];
-            // 跳转到随机选择的链接
-            window.location.href = randomLink;
+
+            // 调用方法2，传入随机链接
+            gtag_report_conversion(randomLink);
         }
-</script>
+    </script>
+
+      
 </body></html>
